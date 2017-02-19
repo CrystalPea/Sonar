@@ -1,8 +1,8 @@
 describe("PropertyListView", function() {
-  var propertyListView
+  var propertyListView;
   var propertyList;
   var property_1;
-  var property_2
+  var property_2;
 
   beforeEach(function() {
     property_1 = jasmine.createSpyObj('property_1', ['returnLocation', 'returnId']);

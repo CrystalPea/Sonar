@@ -26,5 +26,17 @@ describe("Property", function() {
     it("should return property location", function() {
       expect(property.returnLocation()).toEqual("London");
     });
+
+    it("should return property price", function() {
+      expect(property.returnPrice()).toEqual("Guide price £450,000");
+    });
+
+    it("should return property bedrooms", function() {
+      expect(property.returnBedrooms()).toEqual(1);
+    });
+
+    it("should return property id", function() {
+      expect(property.returnId()).toEqual(9384109);
+    });
   });
 });

@@ -26,9 +26,21 @@ describe("PropertyController", function() {
     propertyController = new PropertyController(propertyList);
 });
 
-  describe("propertyListView creation", function() {
+  describe("propertyController creation", function() {
     it("should be created with a PropertyList instance", function() {
       expect(propertyController._propertyList).toEqual(propertyList);
+    });
+  });
+
+  describe("updating the page", function() {
+    it("should update page HTML", function() {
+      propertyController.addPropertyListView(propertyController._propertyList);
+      var app = document.createElement("div");
+      app.id = "app";
+      document.body.appendChild(app);
+      propertyController.updateHTML("app");
+      pattern = "<ul><li><a href=\"#12\">London</a></li><li><a href=\"#14\">Brighton</a></li></ul>"
+      expect(app.innerHTML).toEqual(pattern);
     });
   });
 });

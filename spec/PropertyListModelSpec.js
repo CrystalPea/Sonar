@@ -9,6 +9,10 @@ describe("PropertyList", function() {
     property_1.location.and.callFake(function() {
       return "London";
     });
+    property_2 = jasmine.createSpyObj('property_2', ['location']);
+    property_2.location.and.callFake(function() {
+      return "Brighton";
+    });
 });
 
   describe("propertyList creation", function() {
@@ -29,6 +33,11 @@ describe("PropertyList", function() {
       propertyList.addProperty(property_1);
       expect(propertyList.returnPropertyList()).toEqual([property_1]);
     });
-  });
 
+    it("should enable searching properties by attribute", function() {
+      propertyList.addProperty(property_1);
+      propertyList.addProperty(property_2);
+      expect(propertyList.findProperty({attribute: "location", value: "Brighton"})).toEqual([property_2]);
+    });
+  });
 });

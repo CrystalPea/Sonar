@@ -24,4 +24,11 @@ describe("PropertyList", function() {
     });
   });
 
+  describe("showing properties", function() {
+    it("should return a list of properties", function() {
+      propertyList.addProperty(property_1);
+      expect(propertyList.returnPropertyList()).toEqual([property_1]);
+    });
+  });
+
 });

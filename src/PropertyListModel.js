@@ -1,3 +1,7 @@
 function PropertyList() {
-  this._listOfProperties = []
+  this._properties = []
+};
+
+PropertyList.prototype.addProperty = function(property) {
+  this._properties.push(property);
 };

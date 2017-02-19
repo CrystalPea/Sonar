@@ -26,6 +26,11 @@ describe("PropertyList", function() {
       propertyList.addProperty(property_1);
       expect(propertyList._properties).toEqual([property_1]);
     });
+
+    it("should enable creating and simultaneous adding a property", function() {
+      propertyList.createProperty({location: "London"});
+      expect(propertyList.returnPropertyList()[0].returnLocation()).toEqual("London");
+    });
   });
 
   describe("showing properties", function() {

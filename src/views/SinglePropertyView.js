@@ -3,5 +3,5 @@ function SinglePropertyView(property) {
 };
 
 SinglePropertyView.prototype.showProperty = function() {
-  return "<div>" + this._property.returnLocation() + "</div>"
+  return "<div>" + String(this._property.returnLocation()) + "</div>"
 };

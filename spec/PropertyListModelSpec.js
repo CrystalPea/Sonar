@@ -5,13 +5,19 @@ describe("PropertyList", function() {
 
   beforeEach(function() {
     propertyList = new PropertyList();
-    property_1 = jasmine.createSpyObj('property_1', ['returnLocation']);
+    property_1 = jasmine.createSpyObj('property_1', ['returnLocation', 'returnId']);
     property_1.returnLocation.and.callFake(function() {
       return "London";
     });
-    property_2 = jasmine.createSpyObj('property_2', ['returnLocation']);
+    property_1.returnId.and.callFake(function() {
+      return 12;
+    });
+    property_2 = jasmine.createSpyObj('property_2', ['returnLocation', 'returnId']);
     property_2.returnLocation.and.callFake(function() {
       return "Brighton";
+    });
+    property_2.returnId.and.callFake(function() {
+      return 14;
     });
 });
 
@@ -39,10 +45,11 @@ describe("PropertyList", function() {
       expect(propertyList.returnPropertyList()).toEqual([property_1]);
     });
 
-    it("should enable searching properties by attribute", function() {
+    it("should enable finding property by ID", function() {
       propertyList.addProperty(property_1);
       propertyList.addProperty(property_2);
-      expect(propertyList.findProperty({attribute: "returnLocation", value: "Brighton"})).toEqual([property_2]);
+      debugger;
+      expect(propertyList.findProperty(14)).toEqual(property_2);
     });
   });
 });

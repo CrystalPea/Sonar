@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/CrystalPea/Sonar/issues"
   },
-  "homepage": "https://github.com/CrystalPea/Sonar#readme"
+  "homepage": "https://github.com/CrystalPea/Sonar#readme",
+  "dependencies": {
+    "http-server": "^0.9.0"
+  }
 }

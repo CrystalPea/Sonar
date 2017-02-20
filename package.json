@@ -1,0 +1,24 @@
+{
+  "name": "sonar",
+  "version": "1.0.0",
+  "description": "simple property search single page app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CrystalPea/Sonar.git"
+  },
+  "keywords": [
+    "sonar",
+    "property",
+    "search"
+  ],
+  "author": "Pea",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CrystalPea/Sonar/issues"
+  },
+  "homepage": "https://github.com/CrystalPea/Sonar#readme"
+}

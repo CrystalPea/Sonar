@@ -14,22 +14,24 @@
     <h1>Sonar</h1>
     <h4>Find your perfect home </h4>
   </div>
-  <div id="search-criteria">
-    <ul id="search-form-list">
-      <li id="search-item"><h3> Search criteria </h3></li>
-    	<form id="searchform"  action="#properties/search" method="post">
-        <li id="search-item"><input type="text" id="location" placeholder="Location"></li>
-        <li id="search-item">Price:
-        min <input type="text" id="min-price"> max <input type="text" id="max-price"></li>
-        <li id="search-item"> Bedrooms:
-        min <input type="text" id="min-bedrooms"> max <input type="text" id="max-bedrooms"> </li>
-    		<li id="search-item"><input type="submit" value="Search" id="search"></li>
-    	</form>
-    </ul>
+  <div id="page">
+    <div id="search-criteria">
+      <ul id="search-form-list">
+        <li id="search-item"><h3> Search criteria </h3></li>
+      	<form id="searchform"  action="#properties/search" method="post">
+          <li id="search-item"><input type="text" id="location" placeholder="Location"></li>
+          <li id="search-item">Price:
+          min <input type="text" id="min-price"> max <input type="text" id="max-price"></li>
+          <li id="search-item"> Bedrooms:
+          min <input type="text" id="min-bedrooms"> max <input type="text" id="max-bedrooms"> </li>
+      		<li id="search-item"><input type="submit" value="Search" id="search"></li>
+      	</form>
+      </ul>
+    </div>
+  	<div id="search-results">Enter your criteria and click 'Search' to see available properties</div>
+    <div id="property-details">Click on the property to see the details</div>
   </div>
-	<div id="search-results">Enter your criteria and click 'Search' to see available properties</div>
-  <div id="property-details">Click on the property to see the details</div>
-	<script src="index.js"></script>
+  <script src="index.js"></script>
 </body>
 
 </html>

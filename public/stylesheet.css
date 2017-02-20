@@ -1,0 +1,37 @@
+#body {
+  font-family: Arial, sans-serif;
+}
+
+#search-criteria, #search-results, #property-details {
+  display: inline-block;
+  width: 30%;
+  padding-top: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#search-form-list {
+  list-style: none;
+}
+
+#search-item {
+  padding-top: 5px;
+}
+
+#min-bedrooms, #max-bedrooms {
+  width: 20px;
+}
+
+#min-price, #max-price {
+  width: 40px;
+}
+
+#header {
+  height: auto;
+  background-color: blue;
+  padding-left: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  color: white;
+  font-family: Impact;
+}
